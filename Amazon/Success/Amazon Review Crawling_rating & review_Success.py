@@ -151,7 +151,7 @@ for j in range(len(link)):
         response=Searchreviews(link[j]+'&pageNumber='+str(k))
         soup=BeautifulSoup(response.content, "html.parser")
         for i in soup.findAll("span",{'data-hook':"review-date"}):
-            dates.append(i.text)  
+            dates.append(i.text)
 
 
 # In[20]:
@@ -169,7 +169,7 @@ for j in range(len(link)):
         response=Searchreviews(link[j]+'&pageNumber='+str(k))
         soup=BeautifulSoup(response.content, "html.parser")
         for i in soup.findAll("span",{'data-hook':"review-title"}):
-            titles.append(i.text)        
+            titles.append(i.text)
 
 
 # In[22]:
@@ -187,7 +187,7 @@ for j in range(len(link)):
         response=Searchreviews(link[j]+'&pageNumber='+str(k))
         soup=BeautifulSoup(response.content, "html.parser")
         for i in soup.findAll('i',class_='review-rating'):
-            ratings.append(i.get_text())     
+            ratings.append(i.get_text())
 
 
 # In[42]:
@@ -221,7 +221,7 @@ rev={
     'Date':dates,
     'Title':titles,
      'Rating':ratings,
-     'Review':reviews,    
+     'Review':reviews,
     }
 
 
